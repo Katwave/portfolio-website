@@ -104,8 +104,8 @@ nav {
       -ms-flex-direction: row;
           flex-direction: row;
   z-index: 100;
-  -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8);
-          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
+          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
