@@ -1,0 +1,29 @@
+footer {
+  width: 100%;
+  height: fit-content;
+  padding: 15px;
+  margin-top: 10%;
+  background: rgb(22, 26, 29);
+  @include flexCenter(column);
+  @media screen and (max-width: 600px) {
+    padding: 10px;
+  }
+  a {
+    @include links();
+    margin-top: 20px;
+    border: none;
+    background: none;
+    font-weight: 500;
+    &:hover {
+      color: rgb(0, 157, 255);
+    }
+  }
+  p {
+    font-size: 20px;
+    color: #bbb;
+    @media screen and (max-width: 600px) {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}

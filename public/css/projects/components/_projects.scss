@@ -1,0 +1,105 @@
+section {
+  width: 100%;
+  height: fit-content;
+  background: #111;
+  @include flexCenter(column);
+
+  .heading {
+    margin-top: 130px;
+    background: transparent;
+    @include flexCenter(column);
+    h1 {
+      font-size: 4em;
+      @include fontWeight();
+    }
+    span {
+      width: 50%;
+      height: 10px;
+      background: $lightBlue;
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 1400px) {
+      h1 {
+        font-size: 3em;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      h1 {
+        font-size: 2em;
+      }
+    }
+  }
+
+  // Projects
+  .projects {
+    width: 95%;
+    margin-top: 5%;
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 400px;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 400px;
+    grid-gap: 20px;
+    @media screen and (max-width: 1400px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 750px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project {
+      position: relative;
+      @include shadows();
+
+      .image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .info {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $darkBlue;
+        @include flexCenter(column);
+        padding: 12px;
+        text-align: center;
+        transform: scaleY(0);
+        transition: transform ease-out 0.3s;
+        h3 {
+          font-size: 30px;
+          @include fontWeight();
+        }
+
+        .project-CTA {
+          a {
+            @include buttons();
+            @include links();
+            background: $lightBlue;
+            margin-right: 10px;
+            color: $darkBlue;
+            font-weight: bold;
+            @media screen and (max-width: 500px) {
+              padding: 8px 12px;
+            }
+
+            &:hover {
+              background: #fff;
+              color: $lightBlue;
+            }
+          }
+        }
+      }
+
+      &:hover .info {
+        transform: scaleY(1);
+      }
+    }
+  }
+}

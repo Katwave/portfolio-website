@@ -1,0 +1,66 @@
+section {
+  width: 100%;
+  height: fit-content;
+  background: #111;
+  @include flexCenter(column);
+
+  .error {
+    width: 100%;
+    min-height: 100vh;
+    @include flexCenter(column);
+    padding: 8px;
+    h1 {
+      font-size: 6em;
+      letter-spacing: 10px;
+      @include fontWeight();
+      text-align: center;
+    }
+    h3 {
+      font-size: 2em;
+      @include fontWeight();
+      text-align: center;
+    }
+    a {
+      @include links();
+      @include buttons();
+    }
+
+    @media screen and (max-height: 600px) {
+      margin-top: 100px;
+    }
+  }
+
+  .thank-you {
+    width: 100%;
+    min-height: 100vh;
+    @include flexCenter(column);
+    padding: 8px;
+    h1 {
+      font-size: 3em;
+      letter-spacing: 10px;
+      @include fontWeight();
+      text-align: center;
+    }
+    h3 {
+      font-size: 1em;
+      @include fontWeight();
+      text-align: center;
+    }
+    a {
+      @include links();
+      @include buttons();
+    }
+    p {
+      text-align: center;
+    }
+    @media screen and (max-width: 500px) {
+      h1 {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+    }
+    @media screen and (max-height: 450px) {
+      margin-top: 100px;
+    }
+  }
+}

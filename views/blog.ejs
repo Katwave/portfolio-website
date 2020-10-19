@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#333" />
+    <title>Blog Posts</title>
+    <link rel="icon" href="../img/Katdev2codes2.png" />
+    <link rel="stylesheet" href="../css/fontAwesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/blog/style.css" />
+    <link rel="stylesheet" href="../css/basics/style.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="circle"></div>
+    </div>
+    <div class="cursor"></div>
+
+    <nav>
+      <div class="navContainer">
+        <div class="logo">
+          <a href="/"
+            ><img src="../img/Katdev2codes2.png" alt="Kat Dev Logo"
+          /></a>
+        </div>
+        <div class="navLinks">
+          <div class="mainLinks">
+            <ul>
+              <li>
+                <a href="../Resume/Katlego's Resume.pdf" target="_blank"
+                  >Resume</a
+                >
+              </li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="blogLinks">
+            <ul>
+              <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Nav-bar -->
+
+      <div class="navHam">
+        <div class="logoContainer">
+          <a href="/"
+            ><img src="../img/Katdev2codes2.png" alt="Kat Dev Logo"
+          /></a>
+        </div>
+
+        <div class="ham-burger">
+          
+
+          <button class="hamBTN-open">
+            <span></span><span></span><span></span>
+          </button>
+          <button class="hamBTN-close">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-ham-links">
+        <ul>
+          <li>
+            <a href="../Resume/Katlego's Resume.pdf" target="_blank">Resume</a>
+          </li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog">Blog</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <div class="search">
+      <div class="search-form">
+        <form action="/search-results">
+          <input type="text" name="s" id="search" placeholder="Search..." />
+          <button><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <section>
+      <div class="blog">
+        <div class="heading">
+          <h1>MY BLOG</h1>
+          <span></span>
+        </div>
+
+        <div class="blog-container">
+          <% articles.forEach(article =>{ %>
+            <a class="card-link" href="<%= article.url %>">
+                <div class="blog-card">
+                    <div class="blog-title">
+                      <h1> <%= article.title %> </h1>
+                    </div>
+                    <div class="blog-description">
+                      <h2><%= article.description %></h2>
+                    </div>
+                    <div class="blog-date">
+                      <p><%= article.createdAt %></p>
+                    </div>
+                  </div>
+            </a>
+          <% }) %>
+
+        <div class="blog-nav">
+          <button class="stack">1</button>
+          <button class="stack">2</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/blog">Blog</a><br />
+
+      <p style="font-style: italic">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Copyrights Reserved | Build by Katlego Mangoale
+      </p>
+    </footer>
+
+    <script src="../js/basic.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script>
+      const fw = () => {
+        gsap.from(".blog-card", {
+          duration: 1,
+          opacity: 0,
+          x: -50,
+          ease: "power2.out",
+          stagger: 0.8,
+          delay: 0.5,
+        });
+
+        gsap.from(".heading", {
+          duration: 1,
+          opacity: 0,
+          y: -30,
+          ease: "power2.out",
+          
+        });
+      };
+      
+      window.addEventListener("load", ()=>{
+        fw();
+        document.getElementsByClassName("loader")[0].style = "display:none";
+      });
+    </script>
+  </body>
+</html>

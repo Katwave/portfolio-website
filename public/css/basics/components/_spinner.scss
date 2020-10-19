@@ -1,0 +1,42 @@
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  z-index: 101;
+  @include flexCenter(column);
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 157, 255, 0.4);
+    border: 8px solid #222;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    animation: animate-circle 3s linear infinite;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0;
+      background: $lightBlue;
+      box-shadow: 6px 6px 24px rgba(0, 157, 255, 0.4),
+        6px 6px 60px rgba(0, 157, 255, 0.4), 6px 6px 84px rgba(0, 157, 255, 0.7);
+      width: 50%;
+      height: 50%;
+      // border-radius: 50%;
+
+      @keyframes animate-circle {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}

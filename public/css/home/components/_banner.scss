@@ -1,0 +1,110 @@
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../../img/1.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 99;
+  @include flexCenter(column);
+  @media screen and (max-height: 500px) {
+    height: 120vh;
+  }
+  @media screen and (max-height: 360px) {
+    height: 130vh;
+  }
+
+  .backOpacity {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+  .bannerContent {
+    position: absolute;
+    z-index: 98;
+    width: 86%;
+    background: transparent;
+    @include flexCenter(column);
+    align-items: flex-start;
+    // @media screen and (max-height: 550px) {
+    //   align-items: center;
+    // }
+    @media screen and (max-width: 700px) {
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 5em;
+      @include fontWeight();
+    }
+    p {
+      font-size: 24px;
+    }
+    .CTA {
+      margin-top: 30px;
+      a {
+        @include links();
+        margin-right: 20px;
+        font-size: 24px;
+        @include buttonSlide();
+      }
+    }
+    span {
+      width: 60%;
+      height: 4px;
+      background: rgb(0, 157, 255);
+      margin-top: 50px;
+    }
+    @media screen and (max-width: 1400px) {
+      h1 {
+        font-size: 4em;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      h1 {
+        font-size: 3em;
+      }
+      p {
+        font-size: 20px;
+      }
+      .CTA {
+        a {
+          margin-right: 12px;
+          font-size: 20px;
+          padding: 10px 14px;
+        }
+      }
+    }
+    @media screen and (max-width: 700px) {
+      h1 {
+        font-size: 2em;
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        text-align: center;
+      }
+      .CTA {
+        a {
+          padding: 10px;
+          font-size: 16px;
+        }
+      }
+    }
+    @media screen and (max-width: 300px) {
+      h1 {
+        font-size: 21px;
+      }
+      .CTA {
+        a {
+          padding: 8px;
+          &:nth-child(2) {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}

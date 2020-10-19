@@ -1,0 +1,127 @@
+section {
+  width: 100%;
+  height: fit-content;
+  background: #111;
+  @include flexCenter(column);
+
+  .blog {
+    width: 100%;
+    @include flexCenter(column);
+    justify-content: flex-start;
+    min-height: 100vh;
+
+    .blog-container {
+      margin-top: 170px;
+      width: 60%;
+      @include flexCenter(column);
+      align-items: flex-start;
+      background: transparent;
+      padding: 10px;
+      @media screen and (max-width: 1200px) {
+        width: 70%;
+      }
+      @media screen and (max-width: 1000px) {
+        width: 80%;
+      }
+      @media screen and (max-width: 800px) {
+        width: 95%;
+      }
+
+      a {
+        text-decoration: none;
+        padding: 12px;
+        background: $darkBlue;
+        border-radius: 5px;
+        border-left: 3px solid $lightBlue;
+        @include shadows();
+        transition: all 300ms ease-in-out;
+        color: #fff;
+        overflow: hidden;
+
+        &:hover {
+          background: $lightBlue;
+          @include blueShadows();
+        }
+      }
+
+      h1 {
+        @include fontWeight();
+        font-size: 45px;
+        background: #333;
+        padding: 3px 10px;
+        @media screen and (max-width: 800px) {
+          font-size: 35px;
+        }
+        @media screen and (max-width: 650px) {
+          font-size: 25px;
+        }
+      }
+      h2 {
+        font-weight: 300;
+        font-size: 26px;
+        @media screen and (max-width: 800px) {
+          font-size: 23px;
+        }
+        @media screen and (max-width: 650px) {
+          font-size: 20px;
+        }
+      }
+      .conclude {
+        @include fontWeight();
+      }
+      p {
+        font-size: 20px;
+        @media screen and (max-width: 800px) {
+          font-size: 17px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 15px;
+        }
+      }
+
+      .blog-links {
+        @include flexCenter(column);
+        align-items: flex-start;
+        background: transparent;
+        width: 100%;
+        a {
+          margin-top: 10px;
+          &:hover {
+            @include blueShadows();
+            background: $darkBlue;
+          }
+        }
+      }
+
+      .code-container {
+        background: #111;
+        @include shadows();
+        padding: 6px;
+        border-radius: 5px;
+        border-left: 3px solid #555;
+        span.class {
+          color: rgb(0, 195, 255);
+        }
+        span.attribute {
+          color: rgb(255, 102, 0);
+          grid-template-columns: repeat(3);
+        }
+        span.tag {
+          color: rgb(0, 119, 255);
+        }
+        span.cssSelector {
+          color: rgb(255, 196, 0);
+        }
+        span.css-functions {
+          color: rgb(0, 255, 149);
+        }
+      }
+      .html-code {
+        color: #777;
+      }
+      .css-code {
+        color: #ddd;
+      }
+    }
+  }
+}

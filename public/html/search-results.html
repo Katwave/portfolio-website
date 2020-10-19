@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search results</title>
+    <link rel="icon" href="../img/Katdev2codes2.png" />
+    <link rel="stylesheet" href="../css/fontAwesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/search-results/style.css" />
+    <link rel="stylesheet" href="../css/basics/style.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="circle"></div>
+    </div>
+    <div class="cursor"></div>
+
+    <nav>
+      <div class="navContainer">
+        <div class="logo">
+          <a href="#"
+            ><img src="../img/Katdev2codes2.png" alt="Kat Dev Logo"
+          /></a>
+        </div>
+        <div class="navLinks">
+          <div class="mainLinks">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li>
+                <a href="../Resume/Katlego's Resume.pdf" target="_blank"
+                  >Resume</a
+                >
+              </li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="blogLinks">
+            <ul>
+              <li><a href="/blog">Blog</a></li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Nav-bar -->
+
+      <div class="navHam">
+        <div class="logoContainer">
+          <a href="/"
+            ><img src="../img/Katdev2codes2.png" alt="Kat Dev Logo"
+          /></a>
+        </div>
+
+        <div class="ham-burger">
+         
+
+          <button class="hamBTN-open">
+            <span></span><span></span><span></span>
+          </button>
+          <button class="hamBTN-close">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-ham-links">
+        <ul>
+          <li>
+            <a href="../Resume/Katlego's Resume.pdf" target="_blank">Resume</a>
+          </li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog">Blog</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <div class="search">
+      <div class="search-form">
+        <form action="/search-results">
+          <input type="text" name="s" id="search" placeholder="Search..." />
+          <button><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <section>
+      <div class="blog">
+        <div class="heading">
+          <h1>SEARCH RESULTS</h1>
+          <span></span>
+        </div>
+
+        <div class="blog-container">
+          <div class="blog-card">
+            <div class="blog-title">
+              <h1>Where to learn web development?</h1>
+            </div>
+            <div class="blog-description">
+              <h2>Places and resources available to learn web development</h2>
+            </div>
+            <div class="blog-date">
+              <p>Date: 03 October 2020</p>
+            </div>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-title">
+              <h1>Learn CSS GRID Layout</h1>
+            </div>
+            <div class="blog-description">
+              <h2>Learn how to make your websites responsive with CSS GRID</h2>
+            </div>
+            <div class="blog-date">
+              <p>Date: 03 October 2020</p>
+            </div>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-title">
+              <h1>Overcome fear of Rejection</h1>
+            </div>
+            <div class="blog-description">
+              <h2>Learn how to overcome your fear of rejection</h2>
+            </div>
+            <div class="blog-date">
+              <p>Date: 03 October 2020</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="/blog">Blog</a><br />
+
+      <p style="font-style: italic">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Copyrights Reserved | Build by Katlego Mangoale
+      </p>
+    </footer>
+
+    <script src="../js/basic.js"></script>
+    <script src="../js/search-results/script.js"></script>
+  </body>
+</html>

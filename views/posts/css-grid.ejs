@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#333" />
+    <title>Learn Css Grid</title>
+    <link rel="icon" href="../img/Katdev2codes2.png" />
+    <link rel="stylesheet" href="../css/fontAwesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/posts/style.css" />
+    <link rel="stylesheet" href="../css/basics/style.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="circle"></div>
+    </div>
+    <div class="cursor"></div>
+
+    <nav>
+      <div class="navContainer">
+        <div class="logo">
+          <a href="/"
+            ><img src="../img/Katdev2codes2.png" alt="Kat Dev Logo"
+          /></a>
+        </div>
+        <div class="navLinks">
+          <div class="mainLinks">
+            <ul>
+              <li>
+                <a href="../Resume/Katlego's Resume.pdf" target="_blank"
+                  >Resume</a
+                >
+              </li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="blogLinks">
+            <ul>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Nav-bar -->
+
+      <div class="navHam">
+        <div class="logoContainer">
+          <a href="/"
+            ><img src="../img/Katdev2codes2.png" alt="Kat Dev Logo"
+          /></a>
+        </div>
+
+        <div class="ham-burger">
+          <button class="hamBTN-open">
+            <span></span><span></span><span></span>
+          </button>
+          <button class="hamBTN-close">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-ham-links">
+        <ul>
+          <li>
+            <a href="../Resume/Katlego's Resume.pdf" target="_blank">Resume</a>
+          </li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="search">
+      <div class="search-form">
+        <form action="/search-results">
+          <input type="text" name="s" id="search" placeholder="Search..." />
+          <button><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Blog -->
+    <section>
+      <div class="blog">
+        <div class="blog-container">
+            <h1>Learn CSS Grid Layout</h1>
+            <br />
+            <h2>
+              CSS Grid is one of the most powerful ways of creating Responsive
+              websites, so if you want your website to look good both on a big
+              Monitor screen, Laptop screen and all the way to a small Mobile
+              phone’s screen, here are the necessary steps to implement CSS GRID
+            </h2>
+            <br /><br />
+            <h2 class="rules">STEP 1</h2>
+            <p>
+              Create a HTML file and add a div container that will have the
+              display property which will be set to Grid in the CSS file.
+            </p>
+            <br />
+            <h4>HTML file</h4>
+            <br />
+            <div class="code-container html-code">
+              <code
+                >&lt;<span class="tag"> div </span>
+                <span class="class">class</span>=<span class="attribute"
+                  >"container"</span
+                >&gt;&lt;/<span class="tag"> div </span>&gt;</code
+              >
+            </div>
+            <br />
+            <h4>CSS file</h4>
+            <br />
+            <div class="code-container css-code">
+              <code
+                ><span class="cssSelector">.container</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">100%</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Height</span>:
+                <span class="attribute">100vh</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">background</span>:
+                <span class="attribute">#aaa</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Display</span>:
+                <span class="attribute">Grid</span>;
+                <br />
+                }</code
+              >
+            </div>
+            <br />
+            <!-- Step 2 -->
+            <h2 class="rules">STEP 2</h2>
+            <p>
+              In the HTML file create three sections inside the container div with
+              the class of section1, section2 and section3 respectively. Then in
+              the CSS file, set different background for each section.
+            </p>
+            <br />
+            <h4>HTML file</h4>
+            <br />
+            <div class="code-container html-code">
+              <code
+                >&lt;<span class="tag"> div </span>
+                <span class="class">class</span>=<span class="attribute"
+                  >"section1"</span
+                >&gt;&lt;/<span class="tag"> div </span>&gt;<br />
+                &lt;<span class="tag"> div </span>
+                <span class="class">class</span>=<span class="attribute"
+                  >"section2"</span
+                >&gt;&lt;/<span class="tag"> div </span>&gt;<br />
+                &lt;<span class="tag"> div </span>
+                <span class="class">class</span>=<span class="attribute"
+                  >"section3"</span
+                >&gt;&lt;/<span class="tag"> div </span>&gt;
+              </code>
+            </div>
+            <br />
+            <h4>CSS file</h4>
+            <br />
+            <div class="code-container css-code">
+              <code
+                ><span class="cssSelector">.section1</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">background</span>:
+                <span class="attribute">red</span>;<br />} <br />
+                <span class="cssSelector">.section2</span> { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">green</span>;<br />} <br />
+                <span class="cssSelector">.section3</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">blue</span>;<br />}
+              </code>
+            </div>
+            <br />
+            <h2  class="rules">STEP 3</h2>
+            <p>
+              In the CSS file, add the grid-template-columns to the container and
+              set it to auto for each column. The three autos refers to three
+              columns, two autos refers to two columns and so on. After adding the
+              grid-template-column property, also add a grid-template-rows
+              property to the container, and this property will set the specified
+              height to the sections we have created.
+            </p>
+            <br />
+            <div class="code-container css-code">
+              <code
+                ><span class="cssSelector">.container</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">100%</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Height</span>:
+                <span class="attribute">100vh</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">background</span>:
+                <span class="attribute">#aaa</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Display</span>:
+                <span class="attribute">Grid</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class"
+                  >grid-template-columns</span
+                >: <span class="attribute">auto auto auto</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class"
+                  >grid-template-rows</span
+                >: <span class="attribute">50% 50% 50%</span>;
+                <br />
+                }</code
+              >
+            </div>
+            <br />
+            <p>
+              What we did above is we added three columns using three autos and we
+              also specified the height for the sections to 50% of the container.
+            </p>
+            <br />
+            <h2 class="rules">STEP 4</h2>
+            <p>
+              Now that each section’s height has been specified and we also
+              created the columns, we can go further with the properties that are
+              associated with CSS GRID. Now in the CSS file, add property called
+              Grid-gap to the container and set it to any value that you want.
+            </p>
+            <br />
+            <div class="code-container css-code">
+              <code
+                ><span class="cssSelector">.container</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">100%</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Height</span>:
+                <span class="attribute">100vh</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">background</span>:
+                <span class="attribute">#aaa</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Display</span>:
+                <span class="attribute">Grid</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class"
+                  >grid-template-columns</span
+                >: <span class="attribute">auto auto auto</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class"
+                  >grid-template-rows</span
+                >: <span class="attribute">50% 50% 50%</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">grid-gap</span>:
+                <span class="attribute">50px</span>;
+                <br />
+                }</code
+              >
+            </div>
+            <br />
+            <p>
+              What we did above is we have set the gap between each section to
+              50px away from each other.
+            </p>
+            <br />
+            <h2 class="rules">STEP 5</h2>
+            <p>
+              Now there is an easy way to create the columns, instead of adding
+              autos for each column, we can set or add a function called
+              <span class="attribute">repeat()</span>
+              to the grid-template-columns property. Inside this functiuon we can
+              specify the number of columns we want and that will be done for us.
+            </p>
+            <br />
+            <div class="code-container css-code">
+              <code
+                ><span class="cssSelector">.container</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">100%</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Height</span>:
+                <span class="attribute">100vh</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">background</span>:
+                <span class="attribute">#aaa</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Display</span>:
+                <span class="attribute">Grid</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class"
+                  >grid-template-columns</span
+                >: <span class="css-functions">repeat(3, 1fr)</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class"
+                  >grid-template-rows</span
+                >: <span class="attribute">50% 50% 50%</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">grid-gap</span>:
+                <span class="attribute">50px</span>;
+                <br />
+                }</code
+              >
+            </div>
+            <br />
+            <p>
+              We added three inside the function to tell the browser that we only
+              want three columns inside the container. The 1fr specifies how we
+              want to divede these columns, in our case we divided each column by
+              1. The fr stands for Fraction. Also we can replace the
+              grid-template-rows to grid-auto-rows which does the exact same thing
+              but in will make it easy to set the value for each section. So
+              instead of saying 50% three times for each column, we are going to
+              say 50% only once as the value for grid-auto-rows <br /><br />
+              We added three inside the function to tell the browser that we only
+              want three columns inside the container. The 1fr specifies how we
+              want to divede these columns, in our case we divided each column by
+              1. The fr stands for Fraction. Also we can replace the
+              grid-template-rows to grid-auto-rows which does the exact same thing
+              but in will make it easy to set the value for each section. So
+              instead of saying 50% three times for each column, we are going to
+              say 50% only once as the value for grid-auto-rows
+            </p>
+            <br />
+            <div class="code-container css-code">
+              <code
+                ><span class="cssSelector">.container</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">100%</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Height</span>:
+                <span class="attribute">100vh</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">background</span>:
+                <span class="attribute">#aaa</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Display</span>:
+                <span class="attribute">Grid</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class"
+                  >grid-template-columns</span
+                >: <span class="css-functions">repeat(3, 1fr)</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">grid-auto-rows</span>:
+                <span class="attribute">50%</span>;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">grid-gap</span>:
+                <span class="attribute">50px</span>;
+                <br />
+                }</code
+              >
+            </div>
+            <br />
+            <h2 class="rules">STEP 6</h2>
+            <p>
+              Now that we have some of the properties that are associated with CSS
+              GRID, we can now go further in learning some of them. <br />
+              In the CSS file, add two properties called grid-columns and
+              grid-rows to each section. This two properties specifies where you
+              want to place your sections inside the container. By default, each
+              section is place the way you added them respectively inside the HTML
+              file. <br /><br />
+              The grid-colums property has lines that go vertically while the
+              grid-rows has line that go horizontally. When we set the grid-column
+              to 1, we are saying we want the section to start at column 1 and
+              stop at column 2, if we set it to 2 it will sto at 3 and so on. When
+              we set the grid-rows to 1, we are saying we want a section to start
+              at row 1 and end at row 2, and if we set it to 2 it will stop at row
+              3 and so on.
+            </p>
+            <br />
+            <div class="code-container css-code">
+              <code
+                ><span class="cssSelector">.section1</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">background</span>:
+                <span class="attribute">red</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-columns</span>:
+                <span class="attribute">1</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-rows</span>:
+                <span class="attribute">1</span>;<br />
+                } <br />
+                <span class="cssSelector">.section2</span> { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">green</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-columns</span>:
+                <span class="attribute">1</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-rows</span>:
+                <span class="attribute">1</span>;<br />
+                }
+                <br />
+                <span class="cssSelector">.section3</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">blue</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-columns</span>:
+                <span class="attribute">1</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-rows</span>:
+                <span class="attribute">1</span>;<br />
+                }
+              </code>
+            </div>
+            <br />
+            <h2 class="rules">STEP 7</h2>
+            <p>
+              Now I that we have specified the values for the grid-columns and
+              grid-rows, we can now go further and add a stop or and end point for
+              the sections. To specify a stop or end point, we add a forward slash
+              followed by the value of the column or row we want to end or stop
+              the section at.
+            </p>
+            <br />
+            <div class="code-container css-code">
+              <code
+                ><span class="cssSelector">.section1</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">background</span>:
+                <span class="attribute">red</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-columns</span>:
+                <span class="attribute">1 / 2</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-rows</span>:
+                <span class="attribute">1 / 2</span>;<br />
+                } <br />
+                <span class="cssSelector">.section2</span> { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">green</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-columns</span>:
+                <span class="attribute">2 / 3</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-rows</span>:
+                <span class="attribute">1 / 2</span>;<br />
+                }
+                <br />
+                <span class="cssSelector">.section3</span>{ <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Width</span>:
+                <span class="attribute">blue</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-columns</span>:
+                <span class="attribute">3 / 4</span>;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class">Grid-rows</span>:
+                <span class="attribute">1 / 2</span>;<br />
+                }
+              </code>
+            </div>
+            <br /><br />
+            <h2 class="conclude">
+              That’s it, you will now be able to create responsive websites using
+              CSS GRID. Thank you for reading and visiting my Website!.
+            </h2>
+            <br /><br />
+            
+            <br />
+            <div class="blog-links">
+                <h2>Other Blog posts:</h2>
+                <a href="/blog/Where-to-learn-web-development?">
+                    Where to learn web development for free?
+                  </a>
+                  <a href="/blog/Overcome-fear-of-Rejection">
+                    Overcome fear of rejection
+                  </a>
+            </div>
+          </div>
+    </section>
+
+    <footer>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/blog">Blog</a><br />
+
+      <p style="font-style: italic">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Copyrights Reserved | Build by Katlego Mangoale
+      </p>
+    </footer>
+
+    <script src="../js/basic.js"></script>
+    <script>
+      window.addEventListener("load", (e) => {
+        document.getElementsByClassName("loader")[0].style = "display:none";
+      });
+    </script>
+  </body>
+</html>

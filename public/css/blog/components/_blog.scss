@@ -1,0 +1,131 @@
+section {
+  width: 100%;
+  height: fit-content;
+  background: #111;
+  @include flexCenter(column);
+
+  .blog {
+    width: 100%;
+    @include flexCenter(column);
+    justify-content: flex-start;
+    min-height: 100vh;
+
+    .heading {
+      margin-top: 170px;
+      background: transparent;
+      @include flexCenter(column);
+      h1 {
+        font-size: 4em;
+        @include fontWeight();
+      }
+      span {
+        width: 50%;
+        height: 10px;
+        background: $lightBlue;
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 1400px) {
+        h1 {
+          font-size: 3em;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        h1 {
+          font-size: 2em;
+        }
+      }
+    }
+
+    .blog-container {
+      margin-top: 20px;
+      width: 100%;
+      @include flexCenter(column);
+      background: transparent;
+      padding: 10px;
+
+      a {
+        text-decoration: none;
+        padding: 12px;
+        background: $darkBlue;
+        // @include flexCenter(column);
+        margin-top: 20px;
+        width: 60%;
+        border-radius: 5px;
+        border-left: 3px solid $lightBlue;
+        @include shadows();
+        transition: all 300ms ease-in-out;
+        color: #fff;
+        overflow: hidden;
+        @media screen and (max-width: 800px) {
+          width: 75%;
+        }
+        @media screen and (max-width: 650px) {
+          width: 95%;
+        }
+
+        &:hover {
+          @include blueShadows();
+        }
+        .blog-card {
+          h1 {
+            @include fontWeight();
+            font-size: 30px;
+            @media screen and (max-width: 800px) {
+              font-size: 25px;
+            }
+            @media screen and (max-width: 650px) {
+              font-size: 20px;
+            }
+          }
+          h2 {
+            @include fontWeight();
+            font-size: 20px;
+            @media screen and (max-width: 800px) {
+              font-size: 18px;
+            }
+            @media screen and (max-width: 650px) {
+              font-size: 16px;
+            }
+          }
+          p {
+            font-style: italic;
+            color: #aaa;
+          }
+        }
+      }
+    }
+
+    .blog-nav {
+      margin-top: 20px;
+      width: 60%;
+      padding: 10px;
+      background: transparent;
+      @include flexCenter(row);
+      justify-content: flex-end;
+
+      button {
+        padding: 10px 12px;
+        border: 2px solid $lightBlue;
+        background: transparent;
+        outline: none;
+        color: #999;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 10px;
+        @include shadows();
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          @include blueShadows();
+          background: $lightBlue;
+          color: #fff;
+        }
+      }
+      .stack:nth-child(1) {
+        @include blueShadows();
+        background: $lightBlue;
+        color: #fff;
+      }
+    }
+  }
+}

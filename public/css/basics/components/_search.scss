@@ -1,0 +1,30 @@
+.search {
+  position: fixed;
+  margin-top: 73px;
+  width: 100%;
+  background: transparent;
+  z-index: 98;
+  @include flexCenter(row);
+  align-items: flex-start;
+  justify-content: flex-end;
+  @media screen and (max-width: 500px) {
+    margin-top: 64px;
+  }
+  .search-form {
+    width: 100%;
+    background: transparent;
+    form {
+      @include flexCenter(row);
+      align-items: flex-start;
+      justify-content: flex-end;
+      input {
+        @include search-input();
+        margin: 0;
+      }
+      button {
+        @include search-button();
+        margin: 0;
+      }
+    }
+  }
+}

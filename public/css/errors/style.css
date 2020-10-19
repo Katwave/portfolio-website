@@ -1,0 +1,144 @@
+section {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .error {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8px;
+}
+
+section .error h1 {
+  font-size: 6em;
+  letter-spacing: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+
+section .error h3 {
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+}
+
+section .error a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 18px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  position: relative;
+  z-index: 2;
+  background: #000f18;
+  border-radius: 5px;
+  border: 2px solid #009dff;
+}
+
+section .error a:hover {
+  background: #009dff;
+}
+
+@media screen and (max-height: 600px) {
+  section .error {
+    margin-top: 100px;
+  }
+}
+
+section .thank-you {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8px;
+}
+
+section .thank-you h1 {
+  font-size: 3em;
+  letter-spacing: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+
+section .thank-you h3 {
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+}
+
+section .thank-you a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 18px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  position: relative;
+  z-index: 2;
+  background: #000f18;
+  border-radius: 5px;
+  border: 2px solid #009dff;
+}
+
+section .thank-you a:hover {
+  background: #009dff;
+}
+
+section .thank-you p {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  section .thank-you h1 {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  section .thank-you {
+    margin-top: 100px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

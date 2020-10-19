@@ -1,0 +1,180 @@
+section {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .heading {
+  margin-top: 130px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .heading h1 {
+  font-size: 4em;
+  font-weight: 400;
+}
+
+section .heading span {
+  width: 50%;
+  height: 10px;
+  background: #009dff;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  section .heading h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section .heading h1 {
+    font-size: 2em;
+  }
+}
+
+section .projects {
+  width: 95%;
+  margin-top: 5%;
+  background: transparent;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 400px;
+      grid-template-rows: 400px;
+  grid-auto-columns: 200px;
+  grid-auto-rows: 400px;
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  section .projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  section .projects {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+section .projects .project {
+  position: relative;
+  -webkit-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
+          box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+section .projects .project .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+section .projects .project .image img {
+  width: 100%;
+  height: 100%;
+}
+
+section .projects .project .info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000f18;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 12px;
+  text-align: center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform ease-out 0.3s;
+  transition: -webkit-transform ease-out 0.3s;
+  transition: transform ease-out 0.3s;
+  transition: transform ease-out 0.3s, -webkit-transform ease-out 0.3s;
+}
+
+section .projects .project .info h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+section .projects .project .info .project-CTA a {
+  background: #000f18;
+  border-radius: 5px;
+  border: 2px solid #009dff;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 18px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  position: relative;
+  z-index: 2;
+  background: #009dff;
+  margin-right: 10px;
+  color: #000f18;
+  font-weight: bold;
+}
+
+section .projects .project .info .project-CTA a:hover {
+  background: #009dff;
+}
+
+@media screen and (max-width: 500px) {
+  section .projects .project .info .project-CTA a {
+    padding: 8px 12px;
+  }
+}
+
+section .projects .project .info .project-CTA a:hover {
+  background: #fff;
+  color: #009dff;
+}
+
+section .projects .project:hover .info {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+/*# sourceMappingURL=style.css.map */
