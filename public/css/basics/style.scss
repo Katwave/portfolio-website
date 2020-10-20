@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   &::selection {
-    background: rgb(21, 28, 32);
+    background: #ddd;
+    color: #111;
   }
 }
 
@@ -42,19 +43,19 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 5px solid rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.5);
   background: rgba(0, 15, 24, 0.5);
   z-index: 101;
-  transition: all 200ms ease-out;
+  transition: all 120ms ease-out;
   pointer-events: none;
   &::after {
     content: "";
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     top: 50%;

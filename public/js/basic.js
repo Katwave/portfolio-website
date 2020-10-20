@@ -9,12 +9,12 @@ class followMouse {
     let x = e.clientX;
     let y = e.clientY;
 
-    if (x <= this.body.clientWidth - 20) {
+    if (x <= this.body.clientWidth) {
       this.cursor.style.left = `${x}px`;
       this.cursor.style.top = `${y}px`;
     } else {
-      this.cursor.style.left = `${x - 20}px`;
-      this.cursor.style.top = `${y - 20}px`;
+      this.cursor.style.left = `${x}px`;
+      this.cursor.style.top = `${y}px`;
     }
   }
 }
