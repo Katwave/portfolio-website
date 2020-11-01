@@ -68,8 +68,8 @@ app.get("/invalid", (req, res) => {
   res.sendFile(`${__dirname}/public/html/404-user-not-found.html`);
 });
 
-const Port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(Port, () => {
-  console.log(`Listening on PORT ${Port}...`);
+  console.log(`Listening on PORT ${PORT}...`);
 });
